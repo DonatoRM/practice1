@@ -3,29 +3,20 @@ import { useTranslation } from 'react-i18next';
 import UsersRendered from './UsersRendered';
 import useUsers from '../lib/hooks/useUsers';
 import useFilters from '../lib/hooks/useFilters';
-import InputSearch from './forms/InputSearch';
 import SelectWithIcon from './forms/SelectWithIcon';
-import Checkbox from './forms/Checkbox';
 import TranslatorIcon from './icons/TranslatorIcon';
-import SelectorIcon from './icons/SelectorIcon';
 import ROLE_TYPES from '../lib/constants/roleTypes';
 import ORDER_TYPES from '../lib/constants/orderTypes';
+import UsersFilters from './UsersFilters';
 
 const UsersList = () => {
 	const { users, error, loading } = useUsers();
 	const { t, i18n } = useTranslation();
 
-	const {
-		selectedText,
-		isActive,
-		sortBy,
-		setSelectedText,
-		setIsActive,
-		setSortBy
-	} = useFilters();
+	const { filters, setSelectedText, setIsActive, setSortBy } = useFilters();
 
 	let filteredUsers = users.filter(user =>
-		user.name.toLowerCase().includes(selectedText.toLowerCase())
+		user.name.toLowerCase().includes(filters.selectedText.toLowerCase())
 	);
 	const sortListOfUsersBy = (users, orderType) => {
 		const newUsers = [...users];
@@ -60,9 +51,8 @@ const UsersList = () => {
 				return newUsers;
 		}
 	};
-	filteredUsers = sortListOfUsersBy(filteredUsers, sortBy);
-	console.log(isActive);
-	filteredUsers = isActive
+	filteredUsers = sortListOfUsersBy(filteredUsers, filters.sortBy);
+	filteredUsers = filters.isActive
 		? filteredUsers.filter(user => user.active === true)
 		: filteredUsers;
 
@@ -79,45 +69,12 @@ const UsersList = () => {
 				</SelectWithIcon>
 			</div>
 			<h1 className={style.title}>{t('users-list.title')}</h1>
-			<div className={style.filter}>
-				<div className={style.byName}>
-					<InputSearch
-						value={selectedText}
-						onChange={ev => setSelectedText(ev.target.value)}
-						placeholder={t('users-list.placeholder')}
-					/>
-				</div>
-				<div className={style.byActivity}>
-					<Checkbox
-						label={t('users-list.actives')}
-						value={isActive}
-						onChange={ev => setIsActive(ev.target.checked)}
-					/>
-				</div>
-				<div className={style.sortBy}>
-					<SelectWithIcon
-						value={sortBy}
-						onChange={ev => setSortBy(Number(ev.target.value))}
-						label='Ordenar por:'
-						icon={SelectorIcon}
-					>
-						<option value={ORDER_TYPES.NONE}>{t('users-list.unsorted')}</option>
-						<option value={ORDER_TYPES.BY_NAME}>
-							{t('users-list.by-name')}
-						</option>
-						{!isActive ? (
-							<option value={ORDER_TYPES.BY_ACTIVE}>
-								{t('users-list.by-active')}
-							</option>
-						) : (
-							''
-						)}
-						<option value={ORDER_TYPES.BY_ROLE}>
-							{t('users-list.by-role')}
-						</option>
-					</SelectWithIcon>
-				</div>
-			</div>
+			<UsersFilters
+				filters={filters}
+				setSelectedText={setSelectedText}
+				setIsActive={setIsActive}
+				setSortBy={setSortBy}
+			/>
 			<UsersRendered users={filteredUsers} error={error} loading={loading} />
 		</div>
 	);

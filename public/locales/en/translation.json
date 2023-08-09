@@ -9,18 +9,20 @@
 	"users-list": {
 		"title": "List of users",
 		"spanish": "Spanish",
-		"english": "English",
-		"unsorted": "Unsorted",
-		"by-name": "By name",
-		"by-active": "By activity",
-		"by-role": "By role",
-		"placeholder": "To find...",
-		"actives": "Actives"
+		"english": "English"
 	},
 	"users-rendered": {
 		"loading": "Loading users...",
 		"error-data": "User loading failed",
 		"error-red": "Network error",
 		"error-empty": "No users available"
+	},
+	"users-filters": {
+		"unsorted": "Unsorted",
+		"by-name": "By name",
+		"by-active": "By activity",
+		"by-role": "By role",
+		"placeholder": "To find...",
+		"actives": "Actives"
 	}
 }

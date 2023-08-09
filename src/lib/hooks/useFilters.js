@@ -12,7 +12,7 @@ const useFilters = () => {
 	const setIsActive = isActive => setFilters({ ...filters, isActive });
 	const setSortBy = sortBy => setFilters({ ...filters, sortBy });
 	return {
-		...filters,
+		filters,
 		setSelectedText,
 		setIsActive,
 		setSortBy
