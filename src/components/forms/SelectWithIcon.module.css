@@ -1,0 +1,39 @@
+.wrapper {
+	position: relative;
+	width: fit-content;
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: auto auto;
+	gap: 1rem;
+}
+.label {
+	grid-row: 1;
+	grid-column: 1;
+	display: flex;
+	align-items: center;
+}
+.select {
+	grid-row: 1;
+	grid-column: 2;
+	appearance: none;
+	height: 2rem;
+	width: fit-content;
+	padding: 0 3rem 0 1rem;
+	border: none;
+	outline: none;
+	box-shadow: 1px 1px 8px gray;
+	color: gray;
+	border-radius: 0.5rem;
+}
+.select:focus {
+	box-shadow: 1px 1px 16px gray;
+}
+.icon {
+	position: absolute;
+	height: 1.5rem;
+	width: 1.5rem;
+	top: 0.3rem;
+	right: 0.5rem;
+	pointer-events: none;
+	color: gray;
+}

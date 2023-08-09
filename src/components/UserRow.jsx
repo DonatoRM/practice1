@@ -3,7 +3,7 @@ import ROLE_TYPES from '../lib/constants/roleTypes';
 import { useTranslation } from 'react-i18next';
 
 const UserRow = ({ name, active, role }) => {
-	const { t, i18n } = useTranslation();
+	const { t } = useTranslation();
 	const classActive = active ? style.active : style.inactive;
 	const [userRole, classRole] = ROLES[role] || ROLES.OTHER;
 	let roleUser;

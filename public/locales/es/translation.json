@@ -5,5 +5,22 @@
 		"other": "otro",
 		"active": "Activo",
 		"inactive": "Inactivo"
+	},
+	"users-list": {
+		"title": "Listado de usuarios",
+		"spanish": "Español",
+		"english": "Inglés",
+		"unsorted": "Sin ordenar",
+		"by-name": "Por nombre",
+		"by-active": "Por actividad",
+		"by-role": "Por rol",
+		"placeholder": "Buscar...",
+		"actives": "Activos"
+	},
+	"users-rendered": {
+		"loading": "Cargando usuarios...",
+		"error-data": "Error en la carga de usuarios",
+		"error-red": "Error de red",
+		"error-empty": "No hay usuarios disponibles"
 	}
 }

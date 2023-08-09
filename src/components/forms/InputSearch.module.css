@@ -1,0 +1,25 @@
+.wrapper {
+	position: relative;
+}
+.input {
+	width: 100%;
+	height: 2rem;
+	padding: 0 1rem 0 2.5rem;
+	appearance: none;
+	border: none;
+	outline: none;
+	box-shadow: 1px 1px 8px gray;
+	border-radius: 0.5rem;
+}
+.input:focus {
+	box-shadow: 1px 1px 16px gray;
+}
+.icon {
+	position: absolute;
+	height: 1.5rem;
+	width: 1.5rem;
+	top: 0.2rem;
+	left: 0.5rem;
+	pointer-events: none;
+	color: gray;
+}

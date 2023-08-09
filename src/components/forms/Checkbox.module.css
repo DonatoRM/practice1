@@ -1,0 +1,41 @@
+.wrapper {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+.label {
+	color: black;
+}
+.input {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 2rem;
+	width: 2rem;
+	border: none;
+	outline: none;
+	border-radius: 0.5rem;
+	box-shadow: 1px 1px 8px gray;
+	cursor: pointer;
+}
+.check {
+	opacity: 0;
+	position: absolute;
+	top: -100vh;
+}
+.icon {
+	position: absolute;
+	height: 1.75rem;
+	width: 1.75rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	pointer-events: none;
+	color: gray;
+	user-select: none;
+}
+.check:not(:checked) + .icon {
+	display: none;
+	pointer-events: none;
+}

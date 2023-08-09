@@ -4,10 +4,11 @@
 	align-items: center;
 	border: none;
 	outline: none;
-	padding: 0.5rem 1rem;
+	padding: 1rem 1rem;
 	border-radius: 0.5rem;
 	box-shadow: 1px 1px 8px gray;
 	transition: box-shadow 0.5s linear;
+	margin-bottom: 1rem;
 }
 .wrapper:hover {
 	box-shadow: 1px 1px 16px gray;

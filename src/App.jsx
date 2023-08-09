@@ -1,7 +1,5 @@
-import UserRow from './components/UserRow';
+import UsersList from './components/UsersList';
 
-const App = () => (
-	<UserRow name='Pablo Castellanos' active={true} role='teacher' />
-);
+const App = () => <UsersList />;
 
 export default App;

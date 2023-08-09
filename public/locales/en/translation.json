@@ -5,5 +5,22 @@
 		"other": "other",
 		"active": "Active",
 		"inactive": "Inactive"
+	},
+	"users-list": {
+		"title": "List of users",
+		"spanish": "Spanish",
+		"english": "English",
+		"unsorted": "Unsorted",
+		"by-name": "By name",
+		"by-active": "By activity",
+		"by-role": "By role",
+		"placeholder": "To find...",
+		"actives": "Actives"
+	},
+	"users-rendered": {
+		"loading": "Loading users...",
+		"error-data": "User loading failed",
+		"error-red": "Network error",
+		"error-empty": "No users available"
 	}
 }
