@@ -1,0 +1,56 @@
+.wrapper {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	border: none;
+	outline: none;
+	padding: 0.5rem 1rem;
+	border-radius: 0.5rem;
+	box-shadow: 1px 1px 8px gray;
+	transition: box-shadow 0.5s linear;
+}
+.wrapper:hover {
+	box-shadow: 1px 1px 16px gray;
+	transition: box-shadow 0.5s linear;
+}
+.name {
+	width: 100%;
+	font-weight: bold;
+}
+.userActive {
+	width: 6rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.active {
+	color: green;
+}
+.inactive {
+	color: red;
+}
+.role {
+	width: 6rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.spanRole {
+	width: fit-content;
+	font-size: 0.7rem;
+	padding: 0.1rem 0.5rem;
+	border: none;
+	outline: none;
+	border-radius: 0.5rem;
+	color: white;
+	text-transform: uppercase;
+}
+.teacher {
+	background-color: brown;
+}
+.student {
+	background-color: darkslateblue;
+}
+.other {
+	background-color: darkslategrey;
+}

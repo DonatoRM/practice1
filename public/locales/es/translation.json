@@ -1,0 +1,9 @@
+{
+	"user-row": {
+		"teacher": "profesor",
+		"student": "alumno",
+		"other": "otro",
+		"active": "Activo",
+		"inactive": "Inactivo"
+	}
+}
