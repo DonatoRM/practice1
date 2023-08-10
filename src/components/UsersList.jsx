@@ -2,11 +2,12 @@ import style from './UsersList.module.css';
 import { useTranslation } from 'react-i18next';
 import UsersRendered from './UsersRendered';
 import useUsers from '../lib/hooks/useUsers';
+import useForm from '../lib/hooks/useForm';
 import UsersFilters from './UsersFilters';
 import SelectLanguageChange from './SelectLanguageChange';
 import UsersPaging from './UsersPaging';
-import { useState } from 'react';
 import Button from './buttons/Button';
+import { FORM_TYPES } from '../lib/constants/formTypes';
 
 const UsersList = () => {
 	const { t } = useTranslation();
@@ -48,23 +49,6 @@ const UsersList = () => {
 			/>
 		</div>
 	);
-};
-
-const useForm = () => {
-	const [currentForm, setCurrentForm] = useState(FORM_TYPES.FILTER_FORM);
-	const setFilterForm = () => setCurrentForm(FORM_TYPES.FILTER_FORM);
-	const setCreateForm = () => setCurrentForm(FORM_TYPES.CREATE_FORM);
-	console.log(currentForm);
-	return {
-		currentForm,
-		setFilterForm,
-		setCreateForm
-	};
-};
-
-const FORM_TYPES = {
-	FILTER_FORM: 1,
-	CREATE_FORM: 2
 };
 
 export default UsersList;

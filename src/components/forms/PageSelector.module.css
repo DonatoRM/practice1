@@ -3,6 +3,9 @@
 	align-items: center;
 	gap: 1rem;
 }
+.span {
+	user-select: none;
+}
 .iconLeft,
 .iconRight {
 	height: 2rem;

@@ -7,6 +7,8 @@
 	gap: 1rem;
 }
 .label {
+	user-select: none;
+	user-select: none;
 	grid-row: 1;
 	grid-column: 1;
 	display: flex;

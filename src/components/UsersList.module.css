@@ -6,5 +6,6 @@
 	position: relative;
 }
 .title {
+	user-select: none;
 	text-align: left;
 }

@@ -1,5 +1,5 @@
-import CheckIcon from '../icons/CheckIcon';
 import style from './Checkbox.module.css';
+import CheckIcon from '../icons/CheckIcon';
 
 const Checkbox = ({ label, ...props }) => (
 	<div className={style.wrapper}>
