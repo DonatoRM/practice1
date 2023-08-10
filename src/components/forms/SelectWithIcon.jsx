@@ -2,9 +2,9 @@ import style from './SelectWithIcon.module.css';
 
 const SelectWithIcon = ({ label, icon: Icon, ...props }) => (
 	<div className={style.wrapper}>
-		<span className={style.label}>{label}</span>
+		{label !== undefined ? <span className={style.label}>{label}</span> : ''}
 		<select {...props} className={style.select}></select>
-		<Icon className={style.icon} />
+		{Icon !== undefined ? <Icon className={style.icon} /> : ''}
 	</div>
 );
 

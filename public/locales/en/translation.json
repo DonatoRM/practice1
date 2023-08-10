@@ -32,5 +32,12 @@
 	},
 	"users-paging": {
 		"elements": "Elements"
+	},
+	"user-create": {
+		"teacher": "Teacher",
+		"student": "Student",
+		"other": "Other",
+		"active": "Active?",
+		"button": "Create user"
 	}
 }

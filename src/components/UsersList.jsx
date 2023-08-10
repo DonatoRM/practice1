@@ -8,6 +8,7 @@ import SelectLanguageChange from './SelectLanguageChange';
 import UsersPaging from './UsersPaging';
 import Button from './buttons/Button';
 import { FORM_TYPES } from '../lib/constants/formTypes';
+import UserCreate from './UserCreate';
 
 const UsersList = () => {
 	const { t } = useTranslation();
@@ -35,7 +36,7 @@ const UsersList = () => {
 					}
 				/>
 			) : (
-				<p>CreateForm</p>
+				<UserCreate onClose={setFilterForm} />
 			)}
 			<UsersRendered
 				users={users.filteredUsers}

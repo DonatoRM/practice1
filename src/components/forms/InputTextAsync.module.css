@@ -10,7 +10,8 @@
 }
 .label {
 	font-size: 1rem;
-	color: gray;
+	color: black;
+	font-weight: bold;
 }
 .input {
 	width: 100%;

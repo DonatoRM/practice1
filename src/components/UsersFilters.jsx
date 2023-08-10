@@ -26,6 +26,7 @@ const UsersFilters = ({
 			<div className={style.byActivity}>
 				<Checkbox
 					label={t('users-filters.actives')}
+					position='left'
 					value={filters.isActive}
 					onChange={ev => setIsActive(ev.target.checked)}
 				/>
