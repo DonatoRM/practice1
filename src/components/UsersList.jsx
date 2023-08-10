@@ -7,7 +7,6 @@ import SelectLanguageChange from './SelectLanguageChange';
 import UsersPaging from './UsersPaging';
 import { useState } from 'react';
 import Button from './buttons/Button';
-import InputText from './forms/InputText';
 
 const UsersList = () => {
 	const { t } = useTranslation();
