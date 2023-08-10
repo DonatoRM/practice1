@@ -9,10 +9,13 @@
 	border: none;
 	outline: none;
 	box-shadow: 1px 1px 8px gray;
+	transition: box-shadow 0.5s linear;
+
 	border-radius: 0.5rem;
 }
 .input:focus {
 	box-shadow: 1px 1px 16px gray;
+	transition: box-shadow 0.5s linear;
 }
 .icon {
 	position: absolute;

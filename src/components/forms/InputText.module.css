@@ -20,11 +20,15 @@
 	outline: none;
 	padding: 0 3rem 0 1rem;
 	box-shadow: 1px 1px 8px gray;
+	transition: box-shadow 0.5s linear;
+
 	border-radius: 0.5rem;
 	color: gray;
 }
 .input:focus {
 	box-shadow: 1px 1px 16px gray;
+	transition: box-shadow 0.5s linear;
+
 	color: black;
 }
 .input::placeholder {

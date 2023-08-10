@@ -18,7 +18,12 @@
 	outline: none;
 	border-radius: 0.5rem;
 	box-shadow: 1px 1px 8px gray;
+	transition: box-shadow 0.5s linear;
 	cursor: pointer;
+}
+.input:focus {
+	box-shadow: 1px 1px 16px gray;
+	transition: box-shadow 0.5s linear;
 }
 .check {
 	opacity: 0;
