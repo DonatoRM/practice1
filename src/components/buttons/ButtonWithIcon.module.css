@@ -5,6 +5,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	border-radius: 50%;
 }
 .button {
 	width: 2rem;
@@ -16,7 +17,6 @@
 }
 .button:disabled + .icon {
 	color: lightgray;
-	cursor: default;
 }
 .icon {
 	position: absolute;
