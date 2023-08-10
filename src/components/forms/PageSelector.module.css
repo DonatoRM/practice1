@@ -1,0 +1,10 @@
+.wrapper {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+.iconLeft,
+.iconRight {
+	height: 2rem;
+	width: 2rem;
+}

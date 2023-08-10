@@ -1,0 +1,28 @@
+.wrapper {
+	position: relative;
+	width: 2rem;
+	height: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.button {
+	width: 2rem;
+	height: 2rem;
+	appearance: none;
+	border-radius: 50%;
+	opacity: 0;
+	cursor: pointer;
+}
+.button:disabled + .icon {
+	color: lightgray;
+	cursor: default;
+}
+.icon {
+	position: absolute;
+	width: 2rem;
+	height: 2rem;
+	top: 0rem;
+	right: 0rem;
+	pointer-events: none;
+}

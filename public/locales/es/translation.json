@@ -24,5 +24,11 @@
 		"by-role": "Por rol",
 		"placeholder": "Buscar...",
 		"actives": "Activos"
+	},
+	"page-selector": {
+		"span": "Página {{page}} de {{totalPages}}"
+	},
+	"users-paging": {
+		"elements": "Elementos"
 	}
 }

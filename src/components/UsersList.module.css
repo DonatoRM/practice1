@@ -1,15 +1,10 @@
 .wrapper {
-	min-width: 500px;
-	max-width: 700px;
+	min-width: 600px;
+	max-width: 800px;
 	width: 80%;
 	margin: 0 auto;
 	position: relative;
 }
 .title {
-	text-align: center;
-}
-.languageChange {
-	position: absolute;
-	top: 0;
-	right: 0;
+	text-align: left;
 }
