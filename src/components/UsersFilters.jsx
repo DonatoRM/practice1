@@ -1,6 +1,6 @@
+import style from './UsersFilters.module.css';
 import { useTranslation } from 'react-i18next';
 import ORDER_TYPES from '../lib/constants/orderTypes';
-import style from './UsersFilters.module.css';
 import Checkbox from './forms/Checkbox';
 import InputSearch from './forms/InputSearch';
 import SelectWithIcon from './forms/SelectWithIcon';
@@ -55,7 +55,7 @@ const UsersFilters = ({
 					</option>
 				</SelectWithIcon>
 			</div>
-			{slot}
+			<div className={style.button}>{slot}</div>
 		</div>
 	);
 };

@@ -24,6 +24,7 @@
 	box-shadow: 1px 1px 8px gray;
 	color: gray;
 	border-radius: 0.5rem;
+	cursor: pointer;
 }
 .select:focus {
 	box-shadow: 1px 1px 16px gray;

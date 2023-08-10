@@ -27,7 +27,10 @@ const UsersList = () => {
 					setIsActive={setFilters.setIsActive}
 					setSortBy={setFilters.setSortBy}
 					slot={
-						<Button label='Crear usuario' onClick={() => setCreateForm()} />
+						<Button
+							label={t('users-list.new-user-button-label')}
+							onClick={() => setCreateForm()}
+						/>
 					}
 				/>
 			) : (
