@@ -29,7 +29,9 @@ const useUsers = () => {
 		return () => controller.abort();
 	}, []);
 
-	const { filters, setSelectedText, setIsActive, setSortBy } = useFilters();
+	const { pagination, setPage, setItemsPerPage } = usePagination();
+	const { filters, setSelectedText, setIsActive, setSortBy } =
+		useFilters(setPage);
 
 	let filteredUsers = uploadedUsers.users.filter(user =>
 		user.name.toLowerCase().includes(filters.selectedText.toLowerCase())
@@ -43,7 +45,6 @@ const useUsers = () => {
 	const setFilters = { setSelectedText, setIsActive, setSortBy };
 
 	/* Pages */
-	const { pagination, setPage, setItemsPerPage } = usePagination();
 	const totalPages = Math.ceil(filteredUsers.length / pagination.itemsPerPage);
 	const firstItem = (pagination.page - 1) * pagination.itemsPerPage;
 	const lastItem = pagination.page * pagination.itemsPerPage;

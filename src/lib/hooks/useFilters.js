@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import ORDER_TYPES from '../constants/orderTypes';
 
-const useFilters = () => {
+const useFilters = setPage => {
 	const [filters, setFilters] = useState({
 		selectedText: '',
 		isActive: false,
@@ -9,7 +9,10 @@ const useFilters = () => {
 	});
 	const setSelectedText = selectedText =>
 		setFilters({ ...filters, selectedText });
-	const setIsActive = isActive => setFilters({ ...filters, isActive });
+	const setIsActive = isActive => {
+		setFilters({ ...filters, isActive });
+		setPage(1);
+	};
 	const setSortBy = sortBy => setFilters({ ...filters, sortBy });
 	return {
 		filters,
