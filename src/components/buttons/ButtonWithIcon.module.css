@@ -26,3 +26,6 @@
 	right: 0rem;
 	pointer-events: none;
 }
+.button[disabled]:hover {
+	cursor: default;
+}

@@ -6,7 +6,13 @@ import InputSearch from './forms/InputSearch';
 import SelectWithIcon from './forms/SelectWithIcon';
 import SelectorIcon from './icons/SelectorIcon';
 
-const UsersFilters = ({ filters, setSelectedText, setIsActive, setSortBy }) => {
+const UsersFilters = ({
+	filters,
+	setSelectedText,
+	setIsActive,
+	setSortBy,
+	slot
+}) => {
 	const { t } = useTranslation();
 	return (
 		<div className={style.filter}>
@@ -49,6 +55,7 @@ const UsersFilters = ({ filters, setSelectedText, setIsActive, setSortBy }) => {
 					</option>
 				</SelectWithIcon>
 			</div>
+			{slot}
 		</div>
 	);
 };

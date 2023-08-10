@@ -1,0 +1,16 @@
+.button {
+	appearance: none;
+	padding: 0.5rem 1rem;
+	border-radius: 0.5rem;
+	border: none;
+	outline: none;
+	box-shadow: 1px 1px 8px gray;
+	transition: box-shadow 0.3s linear;
+	background-color: white;
+	color: gray;
+	cursor: pointer;
+}
+.button:hover {
+	box-shadow: 1px 1px 16px gray;
+	transition: box-shadow 0.3s linear;
+}
