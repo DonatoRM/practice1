@@ -28,7 +28,7 @@ const UsersFilters = ({ filters, setSelectedText, setIsActive, setSortBy }) => {
 				<SelectWithIcon
 					value={filters.sortBy}
 					onChange={ev => setSortBy(Number(ev.target.value))}
-					label='Ordenar por:'
+					label={t('users-filters.sort-by')}
 					icon={SelectorIcon}
 				>
 					<option value={ORDER_TYPES.NONE}>

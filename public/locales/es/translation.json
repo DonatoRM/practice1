@@ -23,7 +23,8 @@
 		"by-active": "Por actividad",
 		"by-role": "Por rol",
 		"placeholder": "Buscar...",
-		"actives": "Activos"
+		"actives": "Activos",
+		"sort-by": "Ordenar por:"
 	},
 	"page-selector": {
 		"span": "Página {{page}} de {{totalPages}}"

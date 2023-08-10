@@ -23,7 +23,8 @@
 		"by-active": "By activity",
 		"by-role": "By role",
 		"placeholder": "To find...",
-		"actives": "Actives"
+		"actives": "Actives",
+		"sort-by": "Sort by:"
 	},
 	"page-selector": {
 		"span": "Page {{page}} of {{totalPages}}"
