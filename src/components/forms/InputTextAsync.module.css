@@ -42,11 +42,22 @@
 	color: transparent;
 }
 .error {
+	position: absolute;
+	top: 3.7rem;
 	font-size: 0.8rem;
 	color: red;
 }
 .errorIcon {
 	color: red;
+	animation: rotate 1s linear infinite;
+}
+@keyframes rotate {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
 }
 .okIcon {
 	color: green;

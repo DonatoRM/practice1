@@ -9,9 +9,11 @@ import SelectorIcon from './icons/SelectorIcon';
 import ROLE_TYPES from '../lib/constants/roleTypes';
 import ButtonWithIcon from './buttons/ButtonWithIcon';
 import CrossIcon from './icons/CrossIcon';
+import { useCreateUserData } from '../lib/hooks/useCreateUserData';
 
 const UserCreate = ({ onClose }) => {
 	const { t } = useTranslation();
+	const { name, username, setName, setUsername } = useCreateUserData();
 	return (
 		<div className={style.wrapper}>
 			<div className={style.close}>
@@ -21,13 +23,18 @@ const UserCreate = ({ onClose }) => {
 				<InputText
 					className={style.name}
 					label='Nombre'
-					error=''
+					value={name.value}
+					error={name.error}
 					placeholder='John Doe'
+					onChange={ev => setName(ev.target.value)}
 				/>
 				<InputTextAsync
 					className={style.username}
 					label='Username'
 					placeholder='johndoe'
+					value={username.value}
+					error={username.error}
+					onChange={ev => setUsername(ev.target.value)}
 				/>
 			</div>
 			<div className={style.row2}>
